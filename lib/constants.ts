@@ -3,7 +3,7 @@ import type { Address } from "wagmi";
 export const MAX_ALLOWANCE =
   115792089237316195423570985008687907853269984665640564039457584007913129639935n;
 
-export const exchangeProxy = "0xDef1C0ded9bec7F1a1670819833240f027b25EfF";
+export const exchangeProxy = "0xdef1c0ded9bec7f1a1670819833240f027b25eff";
 
 /* type Token = {
   address: Address;
@@ -20,135 +20,84 @@ interface Token {
 
 export const POLYGON_TOKENS: Token[] = [
   {
-    chainId: 137,
-    name: "Wrapped Matic",
-    symbol: "WMATIC",
+    chainId: 1,
+    name: "Wrapped ETH",
+    symbol: "WETH",
     decimals: 18,
-    address: "0x0d500b1d8e8ef31e21c99d1db9a6444d3adf1270",
+    address: "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2", //WETH
     logoURI:
-      "https://raw.githubusercontent.com/Uniswap/assets/master/blockchains/polygon/assets/0x0d500B1d8E8eF31E21C99d1Db9A6444d3ADf1270/logo.png",
+      "https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/ethereum/assets/0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2/logo.png",
   },
   {
-    chainId: 137,
-    name: "Dai - PoS",
+    chainId: 1,
+    name: "Dai Stablecoin",
     symbol: "DAI",
     decimals: 18,
-    address: "0x8f3cf7ad23cd3cadbd9735aff958023239c6a063",
-    logoURI: "https://wallet-asset.matic.network/img/tokens/dai.svg",
+    address: "0x6B175474E89094C44Da98b954EedeAC495271d0F",
+    logoURI: "https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/ethereum/assets/0x6B175474E89094C44Da98b954EedeAC495271d0F/logo.png",
   },
   {
-    chainId: 137,
-    name: "USD Coin",
-    symbol: "USDC",
-    decimals: 6,
-    address: "0x2791bca1f2de4661ed88a30c99a7a9449aa84174",
-    logoURI: "https://wallet-asset.matic.network/img/tokens/usdc.svg",
-  },
-  {
-    chainId: 137,
-    name: "Uniswap",
-    symbol: "UNI",
+    chainId: 1,
+    name: "Membot",
+    symbol: "MEMBOT",
     decimals: 18,
-    address: "0xb33eaad8d922b1083446dc23f610c2567fb5180f",
-    logoURI: "https://wallet-asset.matic.network/img/tokens/uni.svg",
-  },
-  {
-    chainId: 137,
-    name: "Tether USD - PoS",
-    symbol: "USDT",
-    decimals: 6,
-    address: "0xc2132d05d31c914a87c6611c10748aeb04b58e8f",
-    logoURI:
-      "https://raw.githubusercontent.com/maticnetwork/polygon-token-assets/main/assets/tokenAssets/usdt.svg",
+    address: "0x9eac760d89805558d1a657b59bed313766e09e61",
+    logoURI: "https://cdn.discordapp.com/attachments/1095769891275034655/1143070440441524224/Untitled_design_-_2023-08-14T155139.508.png",
   },
 ];
 
 export const POLYGON_TOKENS_BY_SYMBOL: Record<string, Token> = {
-  wmatic: {
-    chainId: 137,
-    name: "Wrapped Matic",
-    symbol: "WMATIC",
+  weth: {
+    chainId: 1,
+    name: "Wrapped ETH",
+    symbol: "WETH",
     decimals: 18,
-    address: "0x0d500b1d8e8ef31e21c99d1db9a6444d3adf1270",
+    address: "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
     logoURI:
-      "https://raw.githubusercontent.com/Uniswap/assets/master/blockchains/polygon/assets/0x0d500B1d8E8eF31E21C99d1Db9A6444d3ADf1270/logo.png",
+      "https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/ethereum/assets/0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2/logo.png",
   },
   dai: {
-    chainId: 137,
-    name: "Dai - PoS",
+    chainId: 1,
+    name: "Dai Stablecoin",
     symbol: "DAI",
     decimals: 18,
-    address: "0x8f3cf7ad23cd3cadbd9735aff958023239c6a063",
-    logoURI: "https://wallet-asset.matic.network/img/tokens/dai.svg",
+    address: "0x6b175474e89094c44da98b954eedeac495271d0f",
+    logoURI: "https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/ethereum/assets/0x6B175474E89094C44Da98b954EedeAC495271d0F/logo.png",
   },
-  usdc: {
-    chainId: 137,
-    name: "USD Coin",
-    symbol: "USDC",
-    decimals: 6,
-    address: "0x2791bca1f2de4661ed88a30c99a7a9449aa84174",
-    logoURI: "https://wallet-asset.matic.network/img/tokens/usdc.svg",
-  },
-  uni: {
-    chainId: 137,
-    name: "Uniswap",
-    symbol: "UNI",
+  membot: {
+    chainId: 1,
+    name: "Membot",
+    symbol: "MEMBOT",
     decimals: 18,
-    address: "0xb33eaad8d922b1083446dc23f610c2567fb5180f",
-    logoURI: "https://wallet-asset.matic.network/img/tokens/uni.svg",
-  },
-  usdt: {
-    chainId: 137,
-    name: "Tether USD - PoS",
-    symbol: "USDT",
-    decimals: 6,
-    address: "0xc2132D05D31c914a87C6611C10748AEb04B58e8F",
-    logoURI:
-      "https://raw.githubusercontent.com/maticnetwork/polygon-token-assets/main/assets/tokenAssets/usdt.svg",
+    address: "0x9eac760d89805558d1a657b59bed313766e09e61",
+    logoURI: "https://cdn.discordapp.com/attachments/1095769891275034655/1143070440441524224/Untitled_design_-_2023-08-14T155139.508.png",
   },
 };
 
 export const POLYGON_TOKENS_BY_ADDRESS: Record<string, Token> = {
-  "0x0d500b1d8e8ef31e21c99d1db9a6444d3adf1270": {
-    chainId: 137,
-    name: "Wrapped Matic",
-    symbol: "WMATIC",
+  "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2": {
+    chainId: 1,
+    name: "Wrapped ETH",
+    symbol: "WETH",
     decimals: 18,
-    address: "0x0d500b1d8e8ef31e21c99d1db9a6444d3adf1270",
+    address: "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
     logoURI:
       "https://raw.githubusercontent.com/Uniswap/assets/master/blockchains/polygon/assets/0x0d500B1d8E8eF31E21C99d1Db9A6444d3ADf1270/logo.png",
   },
-  "0x8f3cf7ad23cd3cadbd9735aff958023239c6a063": {
-    chainId: 137,
-    name: "DAI - PoS",
+  "0x6b175474e89094c44da98b954eedeac495271d0f": {
+    chainId: 1,
+    name: "DAI Stablecoin",
     symbol: "DAI",
     decimals: 18,
-    address: "0x8f3cf7ad23cd3cadbd9735aff958023239c6a063",
-    logoURI: "https://wallet-asset.matic.network/img/tokens/dai.svg",
+    address: "0x6b175474e89094c44da98b954eedeac495271d0f",
+    logoURI: "https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/ethereum/assets/0x6B175474E89094C44Da98b954EedeAC495271d0F/logo.png",
   },
-  "0x2791bca1f2de4661ed88a30c99a7a9449aa84174": {
-    chainId: 137,
-    name: "USD Coin",
-    symbol: "USDC",
-    decimals: 6,
-    address: "0x2791bca1f2de4661ed88a30c99a7a9449aa84174",
-    logoURI: "https://wallet-asset.matic.network/img/tokens/usdc.svg",
-  },
-  "0xb33eaad8d922b1083446dc23f610c2567fb5180f": {
-    chainId: 137,
-    name: "Uniswap",
-    symbol: "UNI",
+  "0x9eac760d89805558d1a657b59bed313766e09e61": {
+    chainId: 1,
+    name: "Membot",
+    symbol: "MEMBOT",
     decimals: 18,
-    address: "0xb33eaad8d922b1083446dc23f610c2567fb5180f",
-    logoURI: "https://wallet-asset.matic.network/img/tokens/uni.svg",
-  },
-  "0xc2132d05d31c914a87c6611c10748aeb04b58e8f": {
-    chainId: 137,
-    name: "Tether USD - PoS",
-    symbol: "USDT",
-    decimals: 6,
-    address: "0xc2132d05d31c914a87c6611c10748aeb04b58e8f",
-    logoURI:
-      "https://raw.githubusercontent.com/maticnetwork/polygon-token-assets/main/assets/tokenAssets/usdt.svg",
+    address: "0x9eac760d89805558d1a657b59bed313766e09e61",
+    logoURI: "https://cdn.discordapp.com/attachments/1095769891275034655/1143070440441524224/Untitled_design_-_2023-08-14T155139.508.png",
   },
 };

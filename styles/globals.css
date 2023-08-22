@@ -1,28 +1,44 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-/* 
+
+
 :root {
   --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+  --background-rgb: 11, 11, 12;  /* #1A1D29 */
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
     --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
+    --background-rgb: 11, 11, 12;  /* #1A1D29 */
   }
 }
 
 body {
   color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+  background: rgb(var(--background-rgb));
 }
- */
+
+@font-face {
+  font-family: 'Rubik';
+  src: url('/fonts/Rubik-VariableFont_wght.woff2') format('woff2'),
+       url('/fonts/Rubik-VariableFont_wght.woff') format('woff');
+  font-weight: normal, bold, black;
+  font-style: normal;
+}
+
+body {
+  font-family: 'Rubik', sans-serif; /* Use the font, and provide a fallback */
+}
+
+.component-wrapper {
+  position: relative;
+}
+
+.overlay-component {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1; /* This will make sure the component is on top */
+}

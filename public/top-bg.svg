@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1400" height="1242" fill="none" viewBox="0 0 1400 1242">
+  <g clip-path="url(#a)">
+    <path fill="url(#b)" d="M1536 1114c316.46 0 573-256.541 573-573S1852.46-32 1536-32 963 224.541 963 541s256.54 573 573 573Z"/>
+    <path fill="url(#c)" d="M-141.5 1242C242.062 1242 553 931.062 553 547.5S242.062-147-141.5-147-836 163.938-836 547.5-525.062 1242-141.5 1242Z"/>
+    <g clip-path="url(#d)">
+      <path fill="url(#e)" d="M0 979c540.687 0 979-438.313 979-979S540.687-979 0-979-979-540.687-979 0-540.687 979 0 979Z"/>
+    </g>
+  </g>
+  <defs>
+    <radialGradient id="b" cx="0" cy="0" r="1" gradientTransform="matrix(-573 0 0 -573 1536 541)" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#32C3E3" stop-opacity=".25"/>
+      <stop offset="1" stop-color="#295DC3" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="c" cx="0" cy="0" r="1" gradientTransform="rotate(180 -70.75 273.75) scale(694.5)" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#6831D6" stop-opacity=".31"/>
+      <stop offset="1" stop-color="#06131F" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="e" cx="0" cy="0" r="1" gradientTransform="rotate(180) scale(979)" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#285EB0" stop-opacity=".41"/>
+      <stop offset="1" stop-color="#06131F" stop-opacity="0"/>
+    </radialGradient>
+    <clipPath id="a">
+      <path fill="#fff" d="M0 0h1400v1242H0z"/>
+    </clipPath>
+    <clipPath id="d">
+      <path fill="#fff" d="M0 0h979v979H0z"/>
+    </clipPath>
+  </defs>
+</svg>
