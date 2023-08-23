@@ -17,7 +17,7 @@
 
 body {
   color: rgb(var(--foreground-rgb));
-  background: #0D111C;
+  background: #0e0e0e;
   font-family: 'Rubik', sans-serif;
   overflow: hidden;
 }
@@ -32,4 +32,5 @@ body {
 
 .uniswap [color='container'] > div > div:nth-child(3) {
   position: relative;
+  box-shadow: 0px 40px 150px 0px hsla(220, 13%, 68%, 0.16);
 }
