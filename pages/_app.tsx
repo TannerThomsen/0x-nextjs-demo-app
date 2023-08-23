@@ -68,15 +68,6 @@ export default function App({ Component, pageProps }: AppProps) {
           </div>
   
           <div className="flex items-center space-x-4">
-              {/* Third tab */}
-              <a 
-                  href={thirdTab.href}
-                  className="text-gray-500 hover:text-white font-medium transition" 
-                  style={{ fontFamily: 'Rubik, sans-serif' }}
-              >
-                  {thirdTab.label}
-              </a>
-  
               <ConnectKitButton.Custom>
                   {({
                       isConnected,
