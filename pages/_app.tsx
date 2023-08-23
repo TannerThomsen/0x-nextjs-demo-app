@@ -91,7 +91,7 @@ export default function App({ Component, pageProps }: AppProps) {
                           <button
                               onClick={isConnected ? () => setShowOrder(true) : show}
                               type="button"
-                              className="bg-gray-500 hover:bg-blue-700 text-white font-medium py-2.5 px-4 rounded-xl mr-5"
+                              className="bg-gray-500 hover:bg-blue-700 text-white font-medium py-2.5 rounded-xl mr-2 sm: p-2 py-1.5 px-4 sm: px-2 rounded-xl mr-3"
                               style={{ backgroundColor: '#283148' }}
                           >
                               {isConnected && address ? formatAddress(address) : "Connect Wallet"}

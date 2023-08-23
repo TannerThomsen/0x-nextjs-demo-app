@@ -21,7 +21,7 @@ const SwapPage: React.FC = () => {
   let darkMode = true;
   const UNISWAP_TOKEN_LIST = 'https://tokens.coingecko.com/uniswap/all.json';
   const MEMBOT = '0x9eac760d89805558d1a657b59bed313766e09e61';
-  const FEE = '0x1079E06479b037aEEEda9B9D1a2271A6062ce330';
+  const FEE = '0x1079E06479b037aEEEda9B9D1a2271A6062ce330'; 
 
   return (
     
