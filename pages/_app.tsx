@@ -15,6 +15,7 @@ import {
   usePrepareSendTransaction,
   type Address,
 } from "wagmi";
+import { SwapWidget } from "@uniswap/widgets";
 
 const config = createConfig(
   getDefaultConfig({
@@ -43,34 +44,47 @@ export default function App({ Component, pageProps }: AppProps) {
 
   useEffect(() => setMounted(true), []);
 
-  return (
-    <div style={{ padding: "20px", position: "relative" }}>
-      <img src="/memlogo.png" alt="Memswap" className="w-10 h-10 absolute top-4 left-5 h-12 w-auto" />
+  function Navbar() {
+    return (
+      <div className="navbar w-full p-3 border-b border-custom-e flex justify-between items-center">
+        <div className="ml-5">
+          <img src="/memlogo.png" alt="Memswap" className="w-9 h-9" />
+        </div>
+        <ConnectKitButton.Custom>
+          {({
+            isConnected,
+            isConnecting,
+            show,
+            hide,
+            address,
+            ensName,
+            chain,
+          }) => {
+            return (
+              <button
+                onClick={isConnected ? () => setShowOrder(true) : show}
+                type="button"
+                className="bg-gray-500 hover:bg-blue-700 text-white font-medium py-2.5 px-4 rounded-xl mr-5"
+                style={{ backgroundColor: '#283148' }}
+              >
+                {isConnected && address ? formatAddress(address) : "Connect Wallet"}
+              </button>
+            );
+          }}
+        </ConnectKitButton.Custom>
+      </div>
+    );
+  }
 
+  return (
+    <div>
       <WagmiConfig config={config}>
+        
         <ConnectKitProvider>
-          <ConnectKitButton.Custom>
-            {({
-              isConnected,
-              isConnecting,
-              show,
-              hide,
-              address,
-              ensName,
-              chain,
-            }) => {
-              return (
-                <button
-                  onClick={isConnected ? () => setShowOrder(true) : show} // Modified onClick to control the overlay
-                  type="button"
-                  className="bg-gray-500 hover:bg-blue-700 text-white font-medium py-2.5 px-4 rounded-xl absolute top-5 right-5"
-                >
-                  {isConnected ? formatAddress(address) : "Connect Wallet"}
-                </button>
-              );
-            }}
-          </ConnectKitButton.Custom>
-          {mounted && <Component {...pageProps} showOrder={showOrder} setShowOrder={setShowOrder} />} {/* Passed showOrder and setShowOrder as props to the component */}
+          <Navbar />
+          <div style={{ padding: "20px", position: "relative" }}>
+            <SwapWidget/>
+          </div>
         </ConnectKitProvider>
       </WagmiConfig>
     </div>

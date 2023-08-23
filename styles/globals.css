@@ -17,7 +17,9 @@
 
 body {
   color: rgb(var(--foreground-rgb));
-  background: rgb(var(--background-rgb));
+  background: #0D111C;
+  font-family: 'Rubik', sans-serif;
+  overflow: hidden;
 }
 
 @font-face {
@@ -28,17 +30,6 @@ body {
   font-style: normal;
 }
 
-body {
-  font-family: 'Rubik', sans-serif; /* Use the font, and provide a fallback */
-}
-
-.component-wrapper {
+.uniswap [color='container'] > div > div:nth-child(3) {
   position: relative;
-}
-
-.overlay-component {
-  position: absolute;
-  top: 0;
-  left: 0;
-  z-index: 1; /* This will make sure the component is on top */
 }
