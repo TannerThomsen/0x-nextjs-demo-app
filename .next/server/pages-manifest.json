@@ -1,9 +1,8 @@
 {
   "/_app": "pages/_app.js",
-  "/": "pages/index.html",
-  "/_document": "pages/_document.js",
-  "/leaderboard": "pages/leaderboard.html",
   "/_error": "pages/_error.js",
-  "/swap": "pages/swap.html",
-  "/404": "pages/404.html"
+  "/_document": "pages/_document.js",
+  "/": "pages/index.js",
+  "/swap": "pages/swap.js",
+  "/leaderboard": "pages/leaderboard.js"
 }
