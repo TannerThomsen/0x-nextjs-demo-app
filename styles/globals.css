@@ -34,7 +34,7 @@ body {
   font-style: normal;
 }
 
-.uniswap [color='container'] > div > div:nth-child(3) {
+.memswap [color='container'] > div > div:nth-child(3) {
   position: relative;
   box-shadow: 0px 40px 150px 0px hsla(220, 13%, 68%, 0.16);
 }
