@@ -42,7 +42,7 @@ function formatAddress(address: string): string {
 export default function App({ Component, pageProps }: AppProps) {
   const [showOrder, setShowOrder] = useState(false); // Added state for overlay control
   const tabs = [
-    { label: 'Leaderboard', href: '/leaderboard' },
+    { label: '', href: '/' },
     // Add more tabs as needed
   ];
 
