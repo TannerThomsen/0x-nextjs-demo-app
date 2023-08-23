@@ -25,7 +25,7 @@ const SwapPage: React.FC = () => {
 
   return (
     
-    <div className="scale-125 -mt-20 relative h-[100vh] flex justify-center items-center">
+    <div className="sm:scale:100 lg:scale-125 -mt-20 relative h-[100vh] flex justify-center items-center">
       <div className="memswap p-4">
         <SwapWidget 
           theme={darkMode ? myDarkTheme : myLightTheme} 
