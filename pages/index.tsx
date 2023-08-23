@@ -31,7 +31,7 @@ export default function Home() {
         <SwapWidget 
           theme={darkMode ? myDarkTheme : myLightTheme} 
           tokenList={UNISWAP_TOKEN_LIST} 
-          convenienceFee={5} 
+          convenienceFee={1} 
           convenienceFeeRecipient={FEE} 
           defaultOutputTokenAddress={MEMBOT} 
           brandedFooter={false}
