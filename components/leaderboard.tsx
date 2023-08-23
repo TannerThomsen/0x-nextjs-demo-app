@@ -28,8 +28,8 @@ const Leaderboard: React.FC = () => {
     return (
         <div className="flex justify-center items-start h-screen">
             <div className="mx-auto rounded-md pt-20 mt-10 border-custom-e md:scale-125 md:pt-[10em] w-full max-w-3xl px-4 md:px-0">
-                <h2 className="font-bold text-3xl mb-2 text-center">MEMSWAP 24HR LEADERBOARD</h2>
-                <p className="mb-4 pt-4 text-center font-medium text-gray-300">Get to the top of the leaderboard by trading on Memswap to earn points. </p>
+                <h2 className="font-bold text-3xl sm:text-xl mb-2 text-center">MEMSWAP 24HR LEADERBOARD</h2>
+                <p className="mb-4 pt-4 text-center sm:text-xs font-medium text-gray-300">Get to the top of the leaderboard by trading on Memswap to earn points. </p>
                 <p className="mb-8 text-center font-medium text-gray-300">Join our discord and use the /delegate command inside your #private-terminal to get started</p>
 
                 <table className="font-medium text-sm md:text-base text-center min-w-full border-custom-e">
