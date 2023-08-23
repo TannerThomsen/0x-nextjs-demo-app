@@ -5,7 +5,7 @@ export default function Document() {
     <Html lang="en">
       <Head />
       <title>Memswap</title>
-        <meta property="og:title" content="My page title" key="title" />
+        <meta property="og:title" content="Memswap App" key="title" />
       <body>
         <Main />
         <NextScript />
