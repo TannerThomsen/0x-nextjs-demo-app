@@ -21,7 +21,7 @@ const config = createConfig(
   getDefaultConfig({
     // Required API Keys
     alchemyId: process.env.NEXT_PUBLIC_ALCHEMY_API_KEY,
-    walletConnectProjectId: process.env.NEXT_PUBLIC_WALLETCONNECT_PROJECT_ID,
+    walletConnectProjectId: "a2bfdd4ef403e16c1f3e28010134096c",
 
     // Required
     appName: "Memswap",

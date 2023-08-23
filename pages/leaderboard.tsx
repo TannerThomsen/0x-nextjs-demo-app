@@ -21,7 +21,7 @@ const LeaderboardPage: React.FC = () => {
       <Leaderboard />
 
       {/* Countdown Timer */}
-      <div 
+      {/* <div 
           style={{
             position: 'absolute',
             top: '40%',
@@ -36,7 +36,7 @@ const LeaderboardPage: React.FC = () => {
       >
         <CountdownTimer />
       </div>
-      
+       */}
       {/* Overlay */}
       <div 
         style={{
