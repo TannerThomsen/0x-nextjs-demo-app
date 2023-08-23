@@ -15,6 +15,7 @@ import {
   usePrepareSendTransaction,
   type Address,
 } from "wagmi";
+import Link from 'next/link';
 
 const config = createConfig(
   getDefaultConfig({
@@ -40,82 +41,76 @@ function formatAddress(address: string): string {
 
 export default function App({ Component, pageProps }: AppProps) {
   const [showOrder, setShowOrder] = useState(false); // Added state for overlay control
-
+  const tabs = [
+    { label: 'Swap', href: '/swap' },
+    { label: 'Leaderboard', href: '/leaderboard' },
+    { label: 'Rewards', href: '/' },
+    // Add more tabs as needed
+  ];
 
   function Navbar() {
+    // Extract the third tab and the remaining tabs
+    const thirdTab = tabs[2];
+    const remainingTabs = tabs.slice(0, 2);
+  
     return (
       <div className="navbar w-full p-3 border-b border-custom-e flex justify-between items-center">
-        <div className="ml-5">
-          <img src="/memlogo.png" alt="Memswap" className="w-9 h-9" />
-        </div>
-        <ConnectKitButton.Custom>
-          {({
-            isConnected,
-            isConnecting,
-            show,
-            hide,
-            address,
-            ensName,
-            chain,
-          }) => {
-            return (
-              <button
-                onClick={isConnected ? () => setShowOrder(true) : show}
-                type="button"
-                className="bg-gray-500 hover:bg-blue-700 text-white font-medium py-2.5 px-4 rounded-xl mr-5"
-                style={{ backgroundColor: '#283148' }}
+          <div className="flex items-center space-x-4">
+              <div className="ml-5">
+                  <img src="/memlogo.png" alt="Memswap" className="w-9 h-9 mr-4" />
+              </div>
+  
+              {remainingTabs.map((tab, index) => (
+              <Link key={index} href={tab.href} className="text-gray-500 hover:text-white font-medium transition" style={{ fontFamily: 'Rubik, sans-serif' }}>
+              {tab.label}
+          </Link>
+          ))}
+          </div>
+  
+          <div className="flex items-center space-x-4">
+              {/* Third tab */}
+              <a 
+                  href={thirdTab.href}
+                  className="text-gray-500 hover:text-white font-medium transition" 
+                  style={{ fontFamily: 'Rubik, sans-serif' }}
               >
-                {isConnected && address ? formatAddress(address) : "Connect Wallet"}
-              </button>
-            );
-          }}
-        </ConnectKitButton.Custom>
+                  {thirdTab.label}
+              </a>
+  
+              <ConnectKitButton.Custom>
+                  {({
+                      isConnected,
+                      isConnecting,
+                      show,
+                      hide,
+                      address,
+                      ensName,
+                      chain,
+                  }) => {
+                      return (
+                          <button
+                              onClick={isConnected ? () => setShowOrder(true) : show}
+                              type="button"
+                              className="bg-gray-500 hover:bg-blue-700 text-white font-medium py-2.5 px-4 rounded-xl mr-5"
+                              style={{ backgroundColor: '#283148' }}
+                          >
+                              {isConnected && address ? formatAddress(address) : "Connect Wallet"}
+                          </button>
+                      );
+                  }}
+              </ConnectKitButton.Custom>
+          </div>
       </div>
     );
   }
-  const myLightTheme: Theme = {
-    ...lightTheme,
-    accent: '#FF007A',
-    primary: '#000000',
-    secondary: '#565A69',
-  }
-
-  const myDarkTheme: Theme = {
-    ...darkTheme,
-    primary: '#FFFFFF',
-    secondary: '#888D9B',
-    interactive: "#0e0e0e",
-    fontFamily: '"Rubik"',
-    container: '#0e0e0e',
-    module: "#141316",
-    accent: "#5100ff",
-  }
-
-  let darkMode = true;
-  const UNISWAP_TOKEN_LIST = 'https://tokens.coingecko.com/uniswap/all.json';
-  const MEMBOT = '0x9eac760d89805558d1a657b59bed313766e09e61';
-  const FEE = '0x1079E06479b037aEEEda9B9D1a2271A6062ce330';
-  
   return (
     <div>
       <WagmiConfig config={config}>
-        
         <ConnectKitProvider>
           <Navbar />
           <div style={{ padding: "20px", position: "relative" }}>
-          <div className="scale-125 -mt-20 relative h-[100vh] flex justify-center items-center">
-            <div className="uniswap p-4">
-              <SwapWidget 
-                theme={darkMode ? myDarkTheme : myLightTheme} 
-                tokenList={UNISWAP_TOKEN_LIST} 
-                convenienceFee={1} 
-                convenienceFeeRecipient={FEE} 
-                defaultOutputTokenAddress={MEMBOT} 
-                brandedFooter={false}
-                
-              />
-            </div>
-          </div>
+            {/* This is where the main page content will render */}
+            <Component {...pageProps} />
           </div>
         </ConnectKitProvider>
       </WagmiConfig>

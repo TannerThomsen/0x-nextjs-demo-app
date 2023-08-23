@@ -1,7 +1,9 @@
 {
-  "/_error": "pages/_error.js",
   "/_app": "pages/_app.js",
-  "/_document": "pages/_document.js",
   "/": "pages/index.html",
+  "/_document": "pages/_document.js",
+  "/leaderboard": "pages/leaderboard.html",
+  "/_error": "pages/_error.js",
+  "/swap": "pages/swap.html",
   "/404": "pages/404.html"
 }

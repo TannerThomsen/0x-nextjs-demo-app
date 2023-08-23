@@ -21,6 +21,10 @@ body {
   font-family: 'Rubik', sans-serif;
   overflow: hidden;
 }
+.navbar {
+  position: relative; /* or fixed, or absolute, or sticky */
+  z-index: 2147483647;
+}
 
 @font-face {
   font-family: 'Rubik';
