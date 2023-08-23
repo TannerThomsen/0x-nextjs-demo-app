@@ -26,7 +26,7 @@ export default function Home() {
   const FEE = '0x1079E06479b037aEEEda9B9D1a2271A6062ce330';
   
   return (
-    <div className="scale-125 -mt-20 relative h-[100vh] flex justify-center items-center">
+    <div className="sm: scale-100 lg:scale-125 -mt-20 relative h-[100vh] flex justify-center items-center">
       <div className="Uniswap shadow-none">
         <SwapWidget 
           theme={darkMode ? myDarkTheme : myLightTheme} 
