@@ -55,9 +55,11 @@ export default function App({ Component, pageProps }: AppProps) {
     return (
       <div className="navbar w-full p-3 border-b border-custom-e flex justify-between items-center">
           <div className="flex items-center space-x-4">
-              <div className="ml-5">
-                  <img src="/memlogo.png" alt="Memswap" className="w-9 h-9 mr-4" />
-              </div>
+          <div className="ml-2.5">
+          <a href="/">
+              <img src="/memlogo.png" alt="Memswap" className="w-9 h-9 mr-4" />
+          </a>
+      </div>
   
               {remainingTabs.map((tab, index) => (
               <Link key={index} href={tab.href} className="text-gray-500 hover:text-white font-medium transition" style={{ fontFamily: 'Rubik, sans-serif' }}>
