@@ -20,7 +20,7 @@
   "..\\node_modules\\@uniswap\\widgets\\dist\\index-b91766cc.js -> ajv": {
     "id": "..\\node_modules\\@uniswap\\widgets\\dist\\index-b91766cc.js -> ajv",
     "files": [
-      "static/chunks/node_modules_ajv_dist_ajv_js.js"
+      "static/chunks/node_modules_uniswap_widgets_node_modules_ajv_dist_ajv_js.js"
     ]
   },
   "..\\node_modules\\@wagmi\\connectors\\dist\\coinbaseWallet.js -> @coinbase/wallet-sdk": {
